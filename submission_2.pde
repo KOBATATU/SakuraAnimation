@@ -5,7 +5,7 @@ Tree tree;
 Cloud cloud;
 Rain rain;
 Sun sun;
-Sakura[] sakura = new Sakura[100];
+Sakura[] sakura = new Sakura[500];
 
 void setup() {
   size(1200, 800);
@@ -79,15 +79,24 @@ void main_method() {
     sun.add_alpha(0.7); 
     sun.draw_sun();
   } else if (frameCount < 400) {
-    fill(185, 98, Bright, 40); 
+    fill(185, 98, Bright, 70); 
     rect(-10, -10, width+100, height+100); 
     tree.add_initLength(0.4); 
-    tree.draw_a(); 
+    tree.draw_a();
+    tree.change_color_sakura();
+
     sun.draw_sun();
-    
-    for(int i =0;i<sakura.length;i++){
+
+    for (int i =0; i<sakura.length; i++) {
       sakura[i].sakura_draw();
       sakura[i].move();
     }
+  } else if (frameCount<410) {
+    fill(0, 50); 
+    rect(-10, -10, width+100, height+100);
+  } else {
+    fill(255);
+    textSize(16);
+    text("finish", width/2, height/2);
   }
 }

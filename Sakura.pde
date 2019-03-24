@@ -6,21 +6,21 @@ class Sakura {
   color[] colors;
   Sakura() {
     colors = new color[3];
-    colors[0] = color(291, 23, 97, 40);
-    colors[1] = color(310, 13, 99, 40);
-    colors[2] = color(291, 18, 97, 40);
+    colors[0] = color(291, 23, 97);
+    colors[1] = color(310, 13, 99);
+    colors[2] = color(291, 18, 97);
     n = 4;
 
     this.xDef = random(width);
 
     this.xAmp = random(50, 100);
-    this.xSpeed = random(10,6);
+    this.xSpeed = random(2,6);
     this.xTheta = random(360);
 
     this.ox = this.xDef + this.xAmp * sin(radians(this.xTheta));
     this.oy = random(height);
     this.rotateT = random(360);
-    this.size = random(20,50);
+    this.size = random(50,80);
 
     this.ySpeed = this.size / 20;
     this.sizeYScale = 1;

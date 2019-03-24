@@ -3,12 +3,15 @@ class Tree {
   float theta_min;
   float theta_max;
   float initLength;
-
+  float sakura_color;
+  boolean color_leaf;
+  
   Tree(float ThisScale, float This_theta_min, float This_theta_max, float This_initLength) {
     this.reducedScale = ThisScale;
     this.theta_min = This_theta_min;
     this.theta_max = This_theta_max;
     this.initLength = This_initLength;
+    this.color_leaf = true;
   }
 
   void branch(float h) {
@@ -42,8 +45,16 @@ class Tree {
       stroke(0, 20, 40-(h*0.2));
     } else {
       strokeWeight(4);
-      stroke(random(90, 120), random(50, 100), random(70, 100));
+      if(color_leaf){
+      stroke(random(90,120), random(50, 100), random(70, 100));
+    }else{
+      stroke(random(90,120)+sakura_color, random(50, 100), random(70, 100));
+      
+      if(sakura_color < 200){
+        sakura_color+=0.003;
+      }
     }
+  }
   }
   void add_initLength(float add) {
     initLength += add;
@@ -53,10 +64,12 @@ class Tree {
     theta_max += add;
 
   }
-  
   void change_theta(float theta_min, float theta_max) {
     this.theta_min = theta_min;
     this.theta_max = theta_max;
+  }
+  void change_color_sakura(){
+    this.color_leaf = false;
   }
 
   void draw_a() {
