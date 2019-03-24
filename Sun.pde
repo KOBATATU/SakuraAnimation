@@ -29,7 +29,7 @@ class Sun {
 
     pushMatrix();
     translate(width*0.8, height*0.1);
-    rotate(frameCount / 100.0);
+    rotate((frameCount+50) / 100.0);
     noStroke();
     star(); 
 

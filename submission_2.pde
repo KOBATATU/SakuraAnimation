@@ -25,11 +25,6 @@ void draw() {
   main_method();
 }
 
-
-
-
-
-
 void main_method(){
   
   if (frameCount<40) {
