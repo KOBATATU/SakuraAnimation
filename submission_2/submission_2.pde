@@ -19,7 +19,7 @@ void setup() {
   size(1200, 800);
   smooth();
   noStroke();
-
+  player = minim.loadFile("rainbow.mp3"30);
   frameRate(5);
   colorMode(HSB, 360, 100, 100, 100);
   tree = new Tree(0.75, 20, 40, 5);
@@ -34,6 +34,7 @@ void setup() {
 
 
 void draw() {
+  player.play();
   main_method();
 }
 
@@ -104,7 +105,13 @@ void main_method() {
     rect(-10, -10, width+100, height+100);
   } else {
     fill(255);
-    textSize(16);
+    textSize(30);
     text("finish", width/2, height/2);
   }
+}
+void stop()
+{
+  player.close();  
+  minim.stop();  
+  super.stop();    
 }
