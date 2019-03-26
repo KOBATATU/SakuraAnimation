@@ -22,7 +22,11 @@ class Rain {
   void rain(float x,float y) {
     fill(#0C5CF7);
     noStroke();
-    ellipse(x, y, 5, 5);
+    if(this.wind==false){
+    ellipse(x, y, 8, 18);
+    }else{
+      ellipse(x,y,10,18);
+  }
   }
   void add_wind(){
     this.wind = true;
