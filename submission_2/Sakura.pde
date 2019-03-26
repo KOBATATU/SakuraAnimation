@@ -13,7 +13,7 @@ class Sakura {
 
     this.xDef = random(width);
 
-    this.xAmp = random(50, 100);
+    this.xAmp = random(0, 100);
     this.xSpeed = random(2,6);
     this.xTheta = random(360);
 
