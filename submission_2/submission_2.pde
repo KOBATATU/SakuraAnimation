@@ -108,7 +108,7 @@ void main_method() {
     textSize(30);
     text("finish", width/2, height/2);
     textSize(20);
-    text("Sakura forever!!!!", (width/2)-35, height/1.5);
+    text("created Kobayashi tatsuya", (width/2)-70, height/1.5);
   }
 }
 void stop()
