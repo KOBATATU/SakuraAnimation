@@ -23,9 +23,12 @@ class Rain {
     fill(#0C5CF7);
     noStroke();
     if(this.wind==false){
-    ellipse(x, y, 8, 18);
+    ellipse(x, y, 5, 18);
     }else{
-      ellipse(x,y,10,18);
+      pushMatrix();
+      rotate(-PI/14);
+      ellipse(x,y,5,18);
+      popMatrix();
   }
   }
   void add_wind(){
