@@ -2,7 +2,8 @@
 class Sakura {
   float n, A, md, r, x, y;
   float xAmp, xspeed, xTheta, ox, oy, rotateT, size,xDef,xSpeed;
-  float ySpeed, sizeYScale, sizeYT, sizeYSpeed, c, R,aa;
+  float ySpeed, sizeYScale, sizeYT, sizeYSpeed, c, R,aa,random_speedY;
+  boolean wind;
   color[] colors;
   Sakura() {
     colors = new color[3];
@@ -27,6 +28,13 @@ class Sakura {
     this.sizeYT = random(360);
     this.sizeYSpeed = this.size / 30;
     this.c = floor(random(3));
+    this.random_speedY = random(-20,-10);
+    this.wind = false;
+  }
+  
+  void setrandom(){
+    this.wind=true;
+    this.ySpeed += this.random_speedY;
   }
   void sakura_draw() {
     fill(colors[int(this.c)]);
@@ -51,8 +59,10 @@ class Sakura {
 
       x = this.size * R * cos(radians(t));
       y = this.size * this.sizeYScale * R * sin(radians(t));
-
+      
+   
       vertex(x, y);
+      
     }
     endShape(CLOSE);
     popMatrix();

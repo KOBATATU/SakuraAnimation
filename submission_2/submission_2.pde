@@ -87,7 +87,7 @@ void main_method() {
 
     sun.add_alpha(0.7); 
     sun.draw_sun();
-  } else if (frameCount < 400) {
+  } else if (frameCount < 380) {
     fill(185, 98, Bright, 70); 
     rect(-10, -10, width+100, height+100); 
     tree.add_initLength(0.4); 
@@ -100,7 +100,21 @@ void main_method() {
       sakura[i].sakura_draw();
       sakura[i].move();
     }
-  } else if (frameCount<410) {
+  } else if(frameCount <400){
+   fill(185, 98, Bright, 70); 
+    rect(-10, -10, width+100, height+100); 
+    tree.add_initLength(0.4); 
+    tree.draw_a();
+    tree.change_color_sakura();
+
+    sun.draw_sun();
+    
+    for (int i =0; i<sakura.length; i++) {
+      sakura[i].setrandom();
+      sakura[i].sakura_draw();
+      sakura[i].move();
+    }
+  }else if (frameCount<410) {
     fill(0, 50); 
     rect(-10, -10, width+100, height+100);
   } else {
