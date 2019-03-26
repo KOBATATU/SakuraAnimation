@@ -13,4 +13,7 @@ application.windows32
 application.windows64
 application.macosx
 
+### music file ###
+*.mp3
+*.mp4
 # End of https://www.gitignore.io/api/processing
