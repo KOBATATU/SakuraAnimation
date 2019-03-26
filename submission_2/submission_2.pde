@@ -16,10 +16,10 @@ Sun sun;
 Sakura[] sakura = new Sakura[500];
 
 void setup() {
-  size(1200, 800);
+  fullScreen();
   smooth();
   noStroke();
-  player = minim.loadFile("rainbow.mp3"30);
+  player = minim.loadFile("rainbow.mp3");
   frameRate(5);
   colorMode(HSB, 360, 100, 100, 100);
   tree = new Tree(0.75, 20, 40, 5);
