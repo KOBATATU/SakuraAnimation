@@ -13,7 +13,7 @@ Tree tree;
 Cloud cloud;
 Rain rain;
 Sun sun;
-Sakura[] sakura = new Sakura[500];
+Sakura[] sakura = new Sakura[100];
 
 void setup() {
   fullScreen();

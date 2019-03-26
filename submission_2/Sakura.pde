@@ -20,7 +20,7 @@ class Sakura {
     this.ox = this.xDef + this.xAmp * sin(radians(this.xTheta));
     this.oy = random(height);
     this.rotateT = random(360);
-    this.size = random(50,80);
+    this.size = random(20,40);
 
     this.ySpeed = this.size / 20;
     this.sizeYScale = 1;
@@ -30,8 +30,8 @@ class Sakura {
   }
   void sakura_draw() {
     fill(colors[int(this.c)]);
-
-
+    
+    pushMatrix();
     translate(this.ox, this.oy);
     rotate(radians(this.rotateT));
     beginShape();
@@ -55,6 +55,8 @@ class Sakura {
       vertex(x, y);
     }
     endShape(CLOSE);
+    popMatrix();
+    
   }
   void move() {
     this.ox = this.xDef + this.xAmp * sin(radians(this.xTheta));
