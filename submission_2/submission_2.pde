@@ -47,7 +47,7 @@ void main_method() {
     rect(0, 0, width, height); 
     tree.add_initLength(0.8); 
     tree.draw_a();
-  } else if (frameCount < 100) {
+  } else if (frameCount < 110) {
     Bright+=0; 
     noStroke(); 
     fill(185, 98, Bright, 80); 
@@ -61,7 +61,7 @@ void main_method() {
     cloud.add_alpha(1.0); 
     cloud.add_clouds(0.002); 
     cloud.cloud();
-  } else if (frameCount < 150) {
+  } else if (frameCount < 170) {
     Bright+=0.07; 
     fill(185, 98, Bright, 80); 
     rect(-10, -10, width+100, height+100); 
@@ -75,7 +75,7 @@ void main_method() {
 
     cloud.diff_alpha(0.3); 
     cloud.cloud();
-  } else if (frameCount <250) {
+  } else if (frameCount <260) {
     Bright+=0.4; 
     fill(185, 98, Bright, 40); 
     rect(-10, -10, width+100, height+100); 
@@ -87,7 +87,7 @@ void main_method() {
 
     sun.add_alpha(0.7); 
     sun.draw_sun();
-  } else if (frameCount < 380) {
+  } else if (frameCount < 370) {
     fill(185, 98, Bright, 70); 
     rect(-10, -10, width+100, height+100); 
     tree.add_initLength(0.4); 
