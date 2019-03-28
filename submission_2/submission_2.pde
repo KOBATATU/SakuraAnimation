@@ -14,7 +14,6 @@ Cloud cloud;
 Rain rain;
 Sun sun;
 Sakura[] sakura = new Sakura[100];
-
 void setup() {
   fullScreen();
   smooth();
@@ -29,6 +28,7 @@ void setup() {
   for (int i =0; i<sakura.length; i++) {
     sakura[i] = new Sakura();
   }
+ 
 }
 
 
@@ -100,6 +100,8 @@ void main_method() {
       sakura[i].sakura_draw();
       sakura[i].move();
     }
+   
+
   } else if(frameCount <400){
    fill(185, 98, Bright, 70); 
     rect(-10, -10, width+100, height+100); 

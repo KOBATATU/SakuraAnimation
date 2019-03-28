@@ -2,7 +2,7 @@
 class Sakura {
   float n, A, md, r, x, y;
   float xAmp, xspeed, xTheta, ox, oy, rotateT, size,xDef,xSpeed;
-  float ySpeed, sizeYScale, sizeYT, sizeYSpeed, c, R,aa,random_speedY;
+  float ySpeed, sizeYScale, sizeYT, sizeYSpeed, c, R,aa,random_speedY,random_speedX;
   boolean wind;
   color[] colors;
   Sakura() {
@@ -28,13 +28,15 @@ class Sakura {
     this.sizeYT = random(360);
     this.sizeYSpeed = this.size / 30;
     this.c = floor(random(3));
-    this.random_speedY = random(-20,-10);
+    this.random_speedY = random(-10,-10);
+    this.random_speedX = random(-5,5);
     this.wind = false;
   }
   
   void setrandom(){
     this.wind=true;
     this.ySpeed += this.random_speedY;
+    this.ox += this.random_speedX;
   }
   void sakura_draw() {
     fill(colors[int(this.c)]);
